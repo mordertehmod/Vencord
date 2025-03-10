@@ -46,6 +46,7 @@ const AllowedChannelIds = [
     SUPPORT_CHANNEL_ID,
     "1024286218801926184", // Vencord > #bot-spam
     "1033680203433660458", // Vencord > #v
+    "800145732879122472", // JFF > #bot-spam
 ];
 
 const TrustedRolesIds = [

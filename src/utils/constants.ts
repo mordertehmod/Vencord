@@ -264,6 +264,10 @@ export const Devs = /* #__PURE__*/ Object.freeze({
         name: "skyevg",
         id: 1090310844283363348n
     },
+    philhk: {
+        name: "philhk",
+        id: 305288513941667851n
+    },
     Dziurwa: {
         name: "Dziurwa",
         id: 1001086404203389018n
@@ -420,6 +424,10 @@ export const Devs = /* #__PURE__*/ Object.freeze({
         name: "coolelectronics",
         id: 696392247205298207n,
     },
+    Max: {
+        name: "Max",
+        id: 1189527130611138663n,
+    },
     Av32000: {
         name: "Av32000",
         id: 593436735380127770n,
@@ -468,6 +476,14 @@ export const Devs = /* #__PURE__*/ Object.freeze({
         name: "Kodarru",
         id: 785227396218748949n
     },
+    Fres: {
+        name: "fres",
+        id: 843448897737064448n
+    },
+    desu: {
+        name: "desu",
+        id: 526331463709360141n
+    },
     nakoyasha: {
         name: "nakoyasha",
         id: 222069018507345921n
@@ -487,6 +503,14 @@ export const Devs = /* #__PURE__*/ Object.freeze({
     PolisanTheEasyNick: {
         name: "Oleh Polisan",
         id: 242305263313485825n
+    },
+    HAPPY_ENDERMAN: {
+        name: "Happy enderman",
+        id: 1083437693347827764n
+    },
+    SerStars: {
+        name: "SerStars",
+        id: 861631850681729045n
     },
     HAHALOSAH: {
         name: "HAHALOSAH",
@@ -559,10 +583,6 @@ export const Devs = /* #__PURE__*/ Object.freeze({
     Obsidian: {
         name: "Obsidian",
         id: 683171006717755446n,
-    },
-    SerStars: {
-        name: "SerStars",
-        id: 861631850681729045n,
     },
     niko: {
         name: "niko",
