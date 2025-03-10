@@ -21,7 +21,12 @@ lerna-debug.log*
 
 src/userplugins
 
+browser/VencordNativeStub.ts
+
 ExtensionCache/
 settings/
 
 src/plugins/betterCamera.desktop
+src/plugins/betterMicrophone.desktop
+src/plugins/fakeDeafen
+src/plugins/philsPluginLibrary
