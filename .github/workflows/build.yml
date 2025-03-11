@@ -49,11 +49,28 @@ jobs:
               run: |
                   echo "release_tag=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
 
+            - name: Check existing release
+              id: check_release
+              if: github.repository == 'mordertehmod/Vencord'
+              continue-on-error: true
+              run: |
+                gh release view devbuild
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            
+            - name: Create release if needed
+              if: github.repository == 'mordertehmod/Vencord' && steps.check_release.outcome == 'failure'
+              run: |
+                gh release create devbuild --title "DevBuild ${{ env.release_tag }}" --notes "Development build ${{ env.release_tag }}" --prerelease
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                RELEASE_TAG: ${{ env.release_tag }}
+            
             - name: Upload DevBuild as release
               if: github.repository == 'mordertehmod/Vencord'
               run: |
-                  gh release upload devbuild --clobber dist/*
-                  gh release edit devbuild --title "DevBuild $RELEASE_TAG"
+                gh release upload devbuild --clobber dist/*
+                gh release edit devbuild --title "DevBuild $RELEASE_TAG"
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  RELEASE_TAG: ${{ env.release_tag }}
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                RELEASE_TAG: ${{ env.release_tag }}
